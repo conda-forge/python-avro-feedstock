@@ -1,7 +1,7 @@
 About python-avro
 =================
 
-Home: http://hadoop.apache.org/avro
+Home: http://avro.apache.org
 
 Package license: Apache 2.0
 
