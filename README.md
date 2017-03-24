@@ -1,7 +1,7 @@
 About python-avro
 =================
 
-Home: http://hadoop.apache.org/avro
+Home: http://avro.apache.org
 
 Package license: Apache 2.0
 
@@ -10,6 +10,18 @@ Feedstock license: BSD 3-Clause
 Summary: Avro is a serialization and RPC framework.
 
 
+
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/python-avro-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/python-avro-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/python-avro-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/python-avro-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/python-avro-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/python-avro-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/python-avro/badges/version.svg)](https://anaconda.org/conda-forge/python-avro)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/python-avro/badges/downloads.svg)](https://anaconda.org/conda-forge/python-avro)
 
 Installing python-avro
 ======================
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `python-avro` available on your pl
 ```
 conda search python-avro --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/python-avro-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/python-avro-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/python-avro-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/python-avro-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/python-avro-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/python-avro-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/python-avro/badges/version.svg)](https://anaconda.org/conda-forge/python-avro)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/python-avro/badges/downloads.svg)](https://anaconda.org/conda-forge/python-avro)
 
 
 Updating python-avro-feedstock
