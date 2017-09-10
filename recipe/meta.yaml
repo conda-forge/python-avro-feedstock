@@ -1,5 +1,5 @@
-{% set version = "1.8.1" %}
-{% set mirror = "http://mirrors.ocf.berkeley.edu" %}
+{% set version = "1.8.2" %}
+{% set mirror = "http://archive.apache.org/dist" %}
 
 package:
   name: python-avro
@@ -8,12 +8,12 @@ package:
 source:  # [py27 or py3k]
   # Avro exist as two versions in apache avro for py2 and py3.
   fn: avro-{{ version }}.tar.gz  # [py27]
-  url: {{ mirror }}/apache/avro/avro-{{ version }}/py/avro-{{ version }}.tar.gz  # [py27]
-  sha256: 46f34322657281ae717b95c0d712bffa0736f1fa82642ddd7ccf9c3bec635508  # [py27]
+  url: {{ mirror }}/avro/avro-{{ version }}/py/avro-{{ version }}.tar.gz  # [py27]
+  sha256: 'e4181a9dc686c82cbc9bb496787d659d55582c44ad74b69924c45f80f3d513a1'  # [py27]
 
   fn: avro-python3-{{ version }}.tar.gz  # [py3k]
-  url: {{ mirror }}/apache/avro/avro-{{ version }}/py3/avro-python3-{{ version }}.tar.gz  # [py3k]
-  sha256: f25a688f1011216f73f396a5b27185d132f863cfb359be9a41878349cbb418e0  # [py3k]
+  url: {{ mirror }}/avro/avro-{{ version }}/py3/avro-python3-{{ version }}.tar.gz  # [py3k]
+  sha256: 'a3e698f09e702571bc2283471ed97f7055ae4c055a037624d04a95a320242ccf'  # [py3k]
 
 build:
   number: 0
