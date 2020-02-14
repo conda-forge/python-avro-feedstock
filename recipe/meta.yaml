@@ -24,8 +24,10 @@ build:
 
 requirements:
   host:
+    - isort
     - pip
     - python
+    - pycodestyle
   run:
     - python
 
