@@ -1,21 +1,19 @@
 {% set pip_name = 'avro' %}  # [py27]
 {% set pip_name = 'avro-python3' %}  # [py3k]
-{% set version2 = "1.10.0" %}  # {py27}
-{% set version3 = "1.10.0" %}  # {py3k}
+{% set version = "1.10.0" %}
 
 package:
   name: python-avro
-  version: {{ version2 }}  # {py27}
-  version: {{ version3 }}  # {py3k}
+  version: {{ version }}
 
 source:  # [py27 or py3k]
   # Avro exist as two versions in apache avro for py2 and py3k.
-  fn: {{ pip_name }}-{{ version2 }}.tar.gz  # [py27]
-  url: https://pypi.io/packages/source/{{ pip_name[0] }}/{{ pip_name }}/{{ pip_name }}-{{ version2 }}.tar.gz  # [py27]
+  fn: {{ pip_name }}-{{ version }}.tar.gz  # [py27]
+  url: https://pypi.io/packages/source/{{ pip_name[0] }}/{{ pip_name }}/{{ pip_name }}-{{ version }}.tar.gz  # [py27]
   sha256: bbf9f89fd20b4cf3156f10ec9fbce83579ece3e0403546c305957f9dac0d2f03  # [py27]
 
-  fn: {{ pip_name }}-{{ version3 }}.tar.gz  # [py3k]
-  url: https://pypi.io/packages/source/{{ pip_name[0] }}/{{ pip_name }}/{{ pip_name }}-{{ version3 }}.tar.gz  # [py3k]
+  fn: {{ pip_name }}-{{ version }}.tar.gz  # [py3k]
+  url: https://pypi.io/packages/source/{{ pip_name[0] }}/{{ pip_name }}/{{ pip_name }}-{{ version }}.tar.gz  # [py3k]
   sha256: a455c215540b1fceb1823e2a918e94959b54cb363307c97869aa46b5b55bde05  # [py3k]
 
 build:
