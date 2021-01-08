@@ -17,7 +17,7 @@ source:   # [py27 or py3k]
   sha256: 9027abeab63dd9b66bd3c564fa0670c70f78027ecb1978d96c6af7ed415b626b  # [py3k]
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps
 
 requirements:
