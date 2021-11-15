@@ -1,28 +1,22 @@
-{% set pip_name = 'avro' %}  # [py27]
-{% set pip_name = 'avro-python3' %}  # [py3k]
-{% set version2 = "1.9.2" %}  # {py27}
-{% set version3 = "1.9.2.1" %}  # {py3k}
+{% set pip_name = "avro-python3" %}
+{% set version = "1.9.2.1" %}
 
 package:
   name: python-avro
-  version: {{ version2 }}  # {py27}
-  version: {{ version3 }}  # {py3k}
+  version: {{ version }}
 
-source:  # [py27 or py3k]
-  # Avro exist as two versions in apache avro for py2 and py3k.
-  fn: {{ pip_name }}-{{ version2 }}.tar.gz  # [py27]
-  url: https://pypi.io/packages/source/{{ pip_name[0] }}/{{ pip_name }}/{{ pip_name }}-{{ version2 }}.tar.gz  # [py27]
-  sha256: 4487f0e91d0d44142bd08b3c6da57073b720c3effb02eeb4e2e822804964c56b  # [py27]
-
-  fn: {{ pip_name }}-{{ version3 }}.tar.gz  # [py3k]
-  url: https://pypi.io/packages/source/{{ pip_name[0] }}/{{ pip_name }}/{{ pip_name }}-{{ version3 }}.tar.gz  # [py3k]
-  sha256: ca1e77a3da5ac98e8833588f71fb2e170b38e34787ee0e04920de0e9470b7d32  # [py3k]
+source:
+  url: https://pypi.io/packages/source/{{ pip_name[0] }}/{{ pip_name }}/{{ pip_name }}-{{ version }}.tar.gz
+  sha256: ca1e77a3da5ac98e8833588f71fb2e170b38e34787ee0e04920de0e9470b7d32
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv --no-deps"
+  number: 2
+  script: {{ PYTHON }} -m pip install . -vv --no-deps
 
 requirements:
+  build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - isort
     - pip
@@ -40,9 +34,8 @@ about:
   home: http://avro.apache.org
   license: Apache-2.0
   license_family: APACHE
-  license_file: src/avro/LICENSE  # [py27]
-  license_file: avro/LICENSE  # [py3k]
-  summary: 'Avro is a serialization and RPC framework.'
+  license_file: avro/LICENSE
+  summary: Avro is a serialization and RPC framework.
 
 extra:
   recipe-maintainers:
