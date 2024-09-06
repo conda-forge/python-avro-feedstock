@@ -10,8 +10,8 @@ source:
   sha256: 3b63f24e6b04368c3e4a6f923f484be0230d821aad65ac36108edbff29e9aaab
 
 build:
-  number: 4
-  script: {{ PYTHON }} -m pip install . -vv --no-deps
+  number: 5
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   build:
@@ -22,6 +22,7 @@ requirements:
     - pip
     - python
     - pycodestyle
+    - setuptools
   run:
     - python
 
